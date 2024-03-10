@@ -2,6 +2,7 @@ from django.shortcuts import render
 from rest_framework import viewsets
 from app_api.models import TeachersModel
 from app_api.serializers import TeachersSerializer
+from rest_framework.permissions import IsAdminUser
 
 
 # Create your views here.
@@ -10,6 +11,7 @@ from app_api.serializers import TeachersSerializer
 class TeachersViewSet(viewsets.ModelViewSet):
     queryset = TeachersModel.objects.all()
     serializer_class = TeachersSerializer
+    permission_classes = [IsAdminUser]
 
 
 #? The ModelViewSet class provides the basic actions for a model, such as list, create, retrieve, update, and destroy.

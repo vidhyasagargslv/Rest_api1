@@ -1,3 +1,4 @@
-from django.contrib import admin
+from demo_api.admin import admin_site
+from .models import TeachersModel
 
-# Register your models here.
+admin_site.register(TeachersModel)
