@@ -3,12 +3,12 @@ from django.db import models
 # Create your models here.
 
 #creating a student model
-class StudentModel(models.Model):
-    Student_id = models.AutoField(primary_key=True)
-    name = models.CharField(max_length=100)
-    roll = models.IntegerField()
-    marks = models.IntegerField()
-    city = models.CharField(max_length=100)
-    hosteler = models.BooleanField(default=False)
+class TeachersModel(models.Model):
+    Teachers_id = models.AutoField(null=False, primary_key=True)
+    RegNo = models.IntegerField()
+    Name = models.CharField(max_length=100)
+    Email = models.EmailField(max_length=100)
+    Phone = models.IntegerField()
+    Domian =models.CharField(max_length=100)
 
     

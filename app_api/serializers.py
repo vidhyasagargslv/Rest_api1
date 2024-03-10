@@ -1,14 +1,14 @@
 
 from rest_framework import serializers
-from app_api.models import StudentModel
+from app_api.models import TeachersModel
 
 
-class StudentSerializer(serializers.HyperlinkedModelSerializer):
+class TeachersSerializer(serializers.HyperlinkedModelSerializer):
 
     #? it displays the student_id as read only in the API server
-    Student_id = serializers.ReadOnlyField()
+    Teachers_id = serializers.ReadOnlyField()
     class Meta:
-        model= StudentModel
+        model= TeachersModel
         fields = "__all__"
 
 
