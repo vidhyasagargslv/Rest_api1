@@ -10,14 +10,11 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
-        migrations.RemoveField(
-            model_name='teachersmodel',
-            name='id',
-        ),
+        
         migrations.AddField(
             model_name='teachersmodel',
             name='Teachers_id',
-            field=models.AutoField(default=1, primary_key=True, serialize=False),
+            field=models.IntegerField(default=1, primary_key=True, serialize=False),
             preserve_default=False,
         ),
         migrations.AlterField(
